@@ -1,0 +1,318 @@
+
+<div class="botonesMostrar">
+    <div class="imagenFondo"></div>
+    <button id="mostrarFormReclutas">Registrar Recluta</button>
+    <button id="mostrarFormTeam">Registrar Team</button>
+    <button id="mostrarFormSkill">Ingresar Skill</button>
+    <button id="mostrarFormModuloSkill">Registrar Modulo Skill</button>
+    <button id="mostrarFormEvaluacion">Registrar Evaluacion</button>
+</div>
+
+
+<div class="contenedorAllForms">
+    <div class="contenedorFormProducto" id="mostrarFormularioRecluta" style="display: none">
+        <div class="subContenedorProductos">
+            <img src="../img/Nave-espacial-Dream-Chaser-e1620856857225.jpg" alt="">
+            <h1>Recluta</h1>
+                <form id="myFormularioRecluta">
+                    <input class="ingresarDatos" type="text" name="nombreRec" placeholder="Ingrese el nombre del recluta" ><br><br>
+                    <input class="ingresarDatos" type="number" name="identificacionRec" placeholder="Ingrese la identificacion del recluta" ><br><br>
+                    <input class="ingresarDatos" type="number" name="edadRec" placeholder="Ingrese la edad del recluta" ><br><br>
+                    <input class="ingresarDatos" type="number" name="telefonoRec" placeholder="Ingrese el telefono del recluta" ><br><br>
+                    <input class="ingresarDatos" type="email" name="emailRec" placeholder="Ingrese el email del recluta" ><br><br>
+                    <input class="ingresarDatos" type="text" name="direccionRec" placeholder="Ingrese la dirección del recluta" ><br><br>
+                    
+                    <label for="">Fecha de nacimiento</label><br>
+                    <input class="ingresarDatos" type="date" name="fechaNacimientoRec"><br><br>
+    
+                    <label for="">Fecha de ingreso</label><br>
+                    <input class="ingresarDatos" type="date" name="fechaIngresoProgramaRec" placeholder="Ingrese la fecha de ingreso al programa del recluta" ><br><br>
+                    
+                    <div class="botonesDatos">
+                        <input type="submit" data-valor="postRecluta" value="Enviar">
+                        <button data-valor="getRecluta" >Ver Registros</button>
+                    </div>
+                </form>
+                <button id="filterListar" >Listar por fecha</button>
+                <button id="filterListarEdad" >Listar por edad</button>
+        </div>
+        <div id="tablaReclutas" class="tablasGenerales"></div>
+    </div> 
+    
+    <div class="contenedorFormProducto" id="mostrarFormularioTeam" style="display: none">
+        <div class="subContenedorProductos">    
+            <img src="../img/Nave-espacial-Dream-Chaser-e1620856857225.jpg" alt="">
+            <h1>Team</h1>
+            <form id="myFormularioTeam">
+                <input type="text" name="nombreTeam" placeholder="Ingrese el nombre del team"><br><br>
+                <input type="text" name="trainer_asociado" placeholder="Ingrese el nombre del trainer"><br><br>
+    
+                <div class="botonesDatos">
+                    <input type="submit" data-valor="postTeam" value="Enviar">
+                    <button data-valor="getTeam" >Ver Registros</button>
+                </div>
+            </form>
+        </div>
+        <div id="tablaTeams" class="tablasGenerales"></div>
+    </div>
+    
+    <div class="contenedorFormProducto" id="mostrarFormularioSkill" style="display: none">
+        <div class="subContenedorProductos">  
+            <img src="../img/Nave-espacial-Dream-Chaser-e1620856857225.jpg" alt="">   
+            <h1>Skill</h1>
+            <form id="myFormularioSkill">
+                <input type="number" name="IdSkill" placeholder="Ingrese el id de la Skill"><br><br>
+                <input type="text" name="nombreSkill" placeholder="Ingrese el nombre de la Skill"><br><br>
+                
+                <div class="botonesDatos">
+                    <input type="submit" data-valor="postSkill" value="Enviar">
+                    <button data-valor="getSkill">Ver Registros</button>
+                </div>
+            </form>
+        </div>
+        <div id="tablaSkills" class="tablasGenerales"></div>
+    </div>
+    
+    <div class="contenedorFormProducto" id="mostrarFormularioModuloSkill" style="display: none">
+        <div class="subContenedorProductos">  
+            <img src="../img/Nave-espacial-Dream-Chaser-e1620856857225.jpg" alt="">    
+            <h1>Modulo Skill</h1>
+            <form id="myFormularioModuloSkill">
+                <input type="number" name="idModuloSkill" placeholder="Ingrese el id del Modulo de la Skill"><br><br>
+                <input type="text" name="nombreModuloSkill" placeholder="Ingrese el nombre del Modulo de la Skill"><br><br>
+                
+                <div class="botonesDatos">
+                    <input type="submit" data-valor="postModuloSkill" value="Enviar">
+                    <button data-valor="getModuloSkill">Ver Registros</button>
+                </div>
+            </form>
+        </div>
+        <div id="tablaModulosSkills" class="tablasGenerales"></div>
+    </div>
+    
+    <div class="contenedorFormProducto" id="mostrarFormularioEvaluacion" style="display: none">
+        <div class="subContenedorProductos">
+            <img src="../img/Nave-espacial-Dream-Chaser-e1620856857225.jpg" alt="">
+            <h1>Evaluación</h1>
+            <form id="myFormularioEvaluacion">
+                <input type="number" name="identificacionRec" placeholder="Ingrese la cedula del recluta"><br><br>
+                <input type="text" name="nameRec" placeholder="Ingrese el nombre del recluta"><br><br>
+                <input type="number" name="idModuloSkill" placeholder="Ingrese el id del modulo de la Skill"><br><br>
+                <input type="number" name="notaEval" placeholder="Ingrese la nota"><br><br>
+                
+                <div class="botonesDatos">
+                    <input type="submit" data-valor="postEvaluacion" value="Enviar">
+                    <button data-valor="getEvaluacion">Ver Registros</button>
+                </div>
+            </form>
+            <button id="filterListarReprobados" >Listar por reprobados</button>
+        </div>
+        <div id="tablaEvaluacion" class="tablasGenerales"></div>
+    </div>
+    
+</div>
+
+ <style>
+    .botonesMostrar{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 50vh;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .imagenFondo{
+        background-image: url("../img/127957.jpg");
+        background-position: center;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -10;
+    }
+
+    .imagenFondo img{
+        width: 100vw;
+        background-position: center;
+    }
+
+    .botonesMostrar button{
+        margin: 0px 20px;
+        width: 12%;
+        margin-bottom: 30px;
+    }
+
+    .contenedorAllForms{
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*-------------------------------- Contenedor de productos --------------------------------*/
+    .contenedorFormProducto{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subContenedorProductos img{
+        position: absolute;
+        top: -55px;
+        border-radius: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 80px;
+    }
+
+    .subContenedorProductos{
+        position: relative;
+        margin: 60px 0px 20px 0px;
+        text-align: center;
+        padding: 20px;
+        width: 40%;
+    }
+
+    .subContenedorProductos::before{
+        content: "";
+        box-shadow: inset 0 0 10px rgb(14, 20, 105),
+                          0 0 5px rgb(9, 208, 235);
+        top: -7px;
+        left: -6px;
+        z-index: -10;
+        position: absolute;
+        width: 102%;
+        height: 103%;
+    }
+
+    .subContenedorProductos::after{
+        content: "";
+        top: -2px;
+        left: -3px;
+        z-index: -10;
+        position: absolute;
+        width: 101%;
+        height: 101%;
+    }
+
+    #myFormProductos .ingresarDatos{
+        box-shadow: 2px 2px 10px rgb(14, 20, 105),
+                    2px 2px 10px rgb(9, 208, 235);
+        width: 75%;
+        text-align: center;
+        border: none;
+        padding: 5px;
+        outline: none;
+        border-radius: 2%;
+    }
+
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+    }
+
+    .tablasGenerales{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contenedorProducto{
+        border: 1px solid white;
+        margin: 10px;
+        text-align: center;
+        padding: 10px 0px;
+        width: 25rem;
+        font-size: 70%;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .contenedorProducto input{
+        cursor: pointer;
+        box-shadow: 2px 2px 10px rgb(14, 20, 105),
+                    2px 2px 10px rgb(9, 208, 235);
+        width: 50%;
+        padding: 5px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    .contenedorProducto p{
+        width: 25rem;
+        font-size: 100%;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .botonesDatos{
+        display: flex;
+        margin: 10px 0px 10px 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botonesDatos input, button{
+        cursor: pointer;
+        box-shadow: 2px 2px 10px rgb(14, 20, 105),
+                    2px 2px 10px rgb(9, 208, 235);
+        width: 50%;
+        padding: 5px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    @media (max-width: 1197px) {
+        .botonesMostrar button{
+            margin: 0px 10px;
+            width: 16%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 989px) {
+        .botonesMostrar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .botonesMostrar button{
+            margin: 0px 10px;
+            width: 25%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .botonesMostrar{
+            display: flex;
+            margin-top: 0px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .botonesMostrar button{
+            width: 45%;
+            margin-top: -10px;
+        }
+
+        .subContenedorProductos{
+            position: relative;
+            margin: 60px 0px 20px 0px;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+        }
+    }
+    /* ----------------------------------------------------------------------------------------- */
+ </style>

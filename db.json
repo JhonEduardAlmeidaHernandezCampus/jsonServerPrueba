@@ -1,0 +1,80 @@
+{
+  "reclutas": [
+    {
+      "nombreRec": "Jhon",
+      "identificacionRec": "11023912",
+      "edadRec": "23",
+      "telefonoRec": "3005559677",
+      "emailRec": "jhonhernandez@gmail.com",
+      "direccionRec": "Calle 11B # 1A - 20 Zafiro",
+      "fechaNacimientoRec": "1999-09-18",
+      "fechaIngresoProgramaRec": "2023-01-23",
+      "id": 1
+    },
+    {
+      "nombreRec": "Carlos",
+      "identificacionRec": "29299220",
+      "edadRec": "16",
+      "telefonoRec": "3042320234",
+      "emailRec": "carlos@gmail.com",
+      "direccionRec": "Transversal 51A",
+      "fechaNacimientoRec": "1995-07-12",
+      "fechaIngresoProgramaRec": "2022-12-07",
+      "id": 2
+    }
+  ],
+  "team": [
+    {
+      "nombreTeam": "Sputnik",
+      "trainer_asociado": "Miguel",
+      "idTeams": 1683570957572,
+      "id": 1
+    },
+    {
+      "nombreTeam": "Apolo",
+      "trainer_asociado": "Bermen",
+      "idTeams": 1683571349423,
+      "id": 2
+    }
+  ],
+  "skill": [
+    {
+      "IdSkill": "1",
+      "nombreSkill": "HTML",
+      "id": 1
+    },
+    {
+      "IdSkill": "1",
+      "nombreSkill": "Php",
+      "id": 2
+    }
+  ],
+  "moduloSkills": [
+    {
+      "idModuloSkill": "1",
+      "nombreModuloSkill": "Filters",
+      "id": 1
+    },
+    {
+      "idModuloSkill": "1",
+      "nombreModuloSkill": "Notas",
+      "id": 2
+    }
+  ],
+  "evaluacion": [
+    {
+      "identificacionRec": "11023912",
+      "nameRec": "Jhon",
+      "idModuloSkill": "1",
+      "notaEval": "20",
+      "id": 1
+    },
+    {
+      "identificacionRec": "1102391",
+      "nameRec": "Ricardo",
+      "idModuloSkill": "1",
+      "notaEval": "100",
+      "id": 2
+    }
+  ]
+}
